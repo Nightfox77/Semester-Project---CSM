@@ -17,21 +17,27 @@
 <body>
     <header id="header">
         <nav>
-                <label for="menu"><i class="fa-solid fa-bars fa-xl"></i></label>
-                <input type="checkbox" id="menu">
-                <div class="navlinks">
-                    <h3><q>Explore together</q></h3>
-                    <a href="exhibition.html">Exhibitions</a>
-                    <a href="explore.html" >Explore</a>
-                    <a href="visit.html">Vist</a>
-                    <a href="involve.html">Get Involved</a>
-                    <a href="contactabout.html" class="active">About us/ Contact</a>
+            <label class="burgermenu" for="menu"><i class="fa-solid fa-bars fa-xl"></i></label>
+            <input type="checkbox" id="menu">
+            <div class="navlinks">
+                <h3><q>Explore together</q></h3>
+                <div>
+                    <ul>
+                        <li><a href="exhibition.html">Exhibitions</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="visit.html">Visit</a></li>
+                        <li><a href="involve.html">Get Involved</a></li>
+                        <li><a href="contactabout.html" class="active">About us/ Contact</a></li>
+                    </ul>
                 </div>
-            <a href="index.html" class="logo">
-                <h4>Community Science Museum</h4>
-            </a>
-            <label for="search"><i class="fa-solid fa-magnifying-glass fa-xl"></i></label>
-            <input type="checkbox" id="search">
+            </div>
+                <div>
+                    <a href="index.html" class="logo">
+                    <h4>Community Science Museum</h4>
+                    </a>
+                </div>
+                    <label for="search" class="searchicon"><i class="fa-solid fa-magnifying-glass fa-xl"></i></label>
+                    <input type="checkbox" id="search">
             <div class="searchbar">
                 <form class="search">
                     <input type="search" name="searchbar" placeholder="Search.." class="searchinput">
@@ -45,7 +51,9 @@
             <h1>About us</h1>
         </div>
         <section class="grid">
-            <div class="grid-container-single">
+            <div class="grid-container">
+                <div class="imagebox" style="background-image: url(Images/CSMabout.JPG)">
+                </div>
                 <div class="contentbox" style="background-color: #002657;">
                     <p>Come join us at the Community Science Museum where we`re committed to making science accessible to all.</p>
                     <p>Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.</p>
@@ -58,9 +66,8 @@
             <h1>Contact</h1>
         </div>
         <section class="grid">
-            <div class="grid-container-single" >
-                <div class="contentbox" style="background-color: #002657;">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
+            <div class="grid-container" id="grid-container-reverse">
+               <div class="contentbox" id="order1" style="background-color: #002657;">  
                     <form>
                         <div>
                             <label for="name">Name</label>
@@ -80,8 +87,14 @@
                         </div>
                     </form>
                     <a href="#" class="contentbox-link">Submit</a>
+                    </div>
+                    <div class="contentbox" id="order2" style="background-color: #002657;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
+                    </div>
+                    
                 </div>
-                
+               
             </div>
         </section>
     </main>

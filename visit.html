@@ -17,21 +17,27 @@
 <body>
     <header id="header">
         <nav>
-                <label for="menu"><i class="fa-solid fa-bars fa-xl"></i></label>
-                <input type="checkbox" id="menu">
-                <div class="navlinks">
-                    <h3><q>Explore together</q></h3>
-                    <a href="exhibition.html">Exhibitions</a>
-                    <a href="explore.html">Explore</a>
-                    <a href="visit.html" class="active">Vist</a>
-                    <a href="involve.html">Get Involved</a>
-                    <a href="contactabout.html">About us/ Contact</a>
+            <label class="burgermenu" for="menu"><i class="fa-solid fa-bars fa-xl"></i></label>
+            <input type="checkbox" id="menu">
+            <div class="navlinks">
+                <h3><q>Explore together</q></h3>
+                <div>
+                    <ul>
+                        <li><a href="exhibition.html">Exhibitions</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="visit.html" class="active">Visit</a></li>
+                        <li><a href="involve.html">Get Involved</a></li>
+                        <li><a href="contactabout.html">About us/ Contact</a></li>
+                    </ul>
                 </div>
-            <a href="index.html" class="logo">
-                <h4>Community Science Museum</h4>
-            </a>
-            <label for="search"><i class="fa-solid fa-magnifying-glass fa-xl"></i></label>
-            <input type="checkbox" id="search">
+            </div>
+                <div>
+                    <a href="index.html" class="logo">
+                    <h4>Community Science Museum</h4>
+                    </a>
+                </div>
+                    <label for="search" class="searchicon"><i class="fa-solid fa-magnifying-glass fa-xl"></i></label>
+                    <input type="checkbox" id="search">
             <div class="searchbar">
                 <form class="search">
                     <input type="search" name="searchbar" placeholder="Search.." class="searchinput">
@@ -96,13 +102,17 @@
                 <div class="contentbox" style="background-color: #00377E;">
                     <h2>Location</h2>
                     <div>
-                    <p>Community Science Museum</p>
-                    <p>Museumsquare 177</p>    
-                    <p>0445 Futuretown</p>   
-                    <p>Norway</p>
+                        <p>Community Science Museum</p>
+                        <p>Museumsquare 177</p>    
+                        <p>0445 Futuretown</p>   
+                        <p>Norway</p>
                     </div>
-                    <i class="fa-solid fa-phone"><p>555 44 177</p></i>
-                    <i class="fa-solid fa-envelope"><p>csm-info@sketchymail.com</p></i>
+                    <div>
+                        <i class="fa-solid fa-phone"></i><a href="#">555 44 177</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i><a href="#">csm-info@sketchymail.com</a>
+                    </div>
                 </div>
             </div>
             <div class="grid-container" id="grid-container-access">
