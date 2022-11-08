@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-h1,h2,h3,h4,h5, .navlinks {
+h1,h2,q,span,h3, .navlinks {
     font-family: Jost;
 }
 h1 {
@@ -13,10 +13,7 @@ h1 {
     font-weight: bold;
     color: rgb(8, 8, 8);
 }
-h3 {
-    text-decoration: underline;
-}
-h4 {
+span {
     margin: 0;
     font-size: 14px;
     font-weight: bold;
@@ -25,7 +22,7 @@ h4 {
                   1px -1px 0 black,
                   -1px -1px 0 black;
 }
-h5 {
+h3 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 0;
@@ -40,13 +37,11 @@ p {
     font-family: OpenSans;
     color: white;
     text-decoration: none;
+    margin: 10px 0;
 }
 label {
     font-family: Open Sans;
     font-weight: bold;
-}
-p {
-    margin: 10px 0;
 }
 nav {
     background-image: url("Images/CSMbackground.JPG");
@@ -66,7 +61,7 @@ ul {
     padding: 0;
     text-align: center;
 }
-i, h3, h4, a {
+i, a {
     color: white;
     text-decoration: none;
 }
@@ -378,7 +373,7 @@ footer {
         height: 150px;
         
     }
-    footer .logo h4 {
+    span {
         font-size: 20px;
     }
     .footer-info {
