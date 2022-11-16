@@ -153,10 +153,12 @@ i, a {
 }
 .grid-container-column {
     display: grid;
-    grid-auto-columns: minmax(250px,auto) ;
+    grid-auto-columns: minmax(250px,500px) ;
     grid-auto-rows: auto minmax(300px, max-content) 1fr;
     align-content: flex-start;
-    
+}
+.grid-container-column .contentbox {
+    justify-content: center;
 }
 .grid-container:hover {
     cursor: pointer;
@@ -181,6 +183,7 @@ i, a {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
     border-radius: 0 0 5px 5px;
 }
 .contentbox ~ p {
@@ -188,11 +191,11 @@ i, a {
     height: 100px;
 }
 .contentbox label {
-    text-align: center;
+    
     display: flex;
-    flex-direction: column;
     margin-top: auto;
     margin-bottom: 10px;
+    justify-content: center;
 }
 .contentbox label i:hover {
     cursor: pointer;
@@ -203,6 +206,7 @@ i, a {
 #moreinfo-robo:checked ~ .secondparagraf-robo, #moreinfo-night:checked ~ .secondparagraf-night, #moreinfo-aero:checked ~ .secondparagraf-aero, #moreinfo-energy:checked ~ .secondparagraf-energy,
 #moreinfo-support:checked ~ .secondparagraf-support, #moreinfo-volunteer:checked ~ .secondparagraf-volunteer, #moreinfo-intern:checked ~ .secondparagraf-intern, #moreinfo-admission:checked ~ .secondparagraf-admission {
     display: block;
+    
     
 }
 .contentbox .fa-phone, .contentbox .fa-envelope {
@@ -399,7 +403,7 @@ footer {
     .grid-row {
         flex-direction: row;
         max-width: 80%;
-        
+
     }
     .grid-container, #grid-container-access {
     grid-template-rows: minmax(50px, 300px) minmax(260px, auto);
