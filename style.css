@@ -15,7 +15,7 @@ h1 {
 }
 span {
     margin: 0;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: -1px 1px 2px black,
                   1px 1px 2px black,
@@ -45,7 +45,6 @@ label {
 }
 nav {
     background-image: url("Images/CSMbackground.JPG");
-    aspect-ratio: 10/1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 50%;
@@ -65,7 +64,9 @@ i, a {
     color: white;
     text-decoration: none;
 }
-#menu, #search, .navlinks, .searchbar {
+#menu, #search, .navlinks, .searchbar, #moreinfo-cosmo, #moreinfo-bio, #moreinfo-evo, #moreinfo-eco, #moreinfo-robo,#moreinfo-night,#moreinfo-aero,#moreinfo-kids,#moreinfo-teachers,#moreinfo-researchers,#moreinfo-energy, .secondparagraf-bio, .secondparagraf-evo,
+.secondparagraf-eco,.secondparagraf-forkids, .secondparagraf-forteachers, .secondparagraf-forresearchers, .secondparagraf-robo, .secondparagraf-cosmo, .secondparagraf-night, .secondparagraf-aero, .secondparagraf-energy,
+#moreinfo-support, #moreinfo-volunteer,#moreinfo-intern, #moreinfo-admission, .secondparagraf-support, .secondparagraf-volunteer, .secondparagraf-intern, .secondparagraf-admission {
     display: none;
 }
 .navlinks {
@@ -130,51 +131,81 @@ i, a {
 .grid {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 20px;
     align-items: center;
     margin-bottom: 20px;
+    max-width: 90%;
+    margin: 20px auto;
 }
-.grid-column {
+.grid-row {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    gap: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    justify-content: center;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: minmax(100px, 400px);
-    grid-template-rows: minmax(50px, 300px) 1fr;
+    grid-template-columns: minmax(100px, 300px);
+    grid-template-rows: minmax(50px, 300px) minmax(220px, auto);
+    border-radius: 5px;
+}
+.grid-container-column {
+    display: grid;
+    grid-auto-columns: minmax(250px,auto) ;
+    grid-auto-rows: auto minmax(300px, max-content) 1fr;
+    align-content: flex-start;
+    
+}
+.grid-container:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px grey;
 }
 #grid-container-access {
-    grid-template-columns: minmax(100px, 200px) minmax(100px, 200px);
-    grid-template-rows: minmax(100px, 200px) minmax(100px, 150px);
+    grid-template-columns: minmax(100px, 150px) minmax(100px, 150px);
+    
 }
 #grid-container-access .contentbox {
     grid-column: 1/3;
-}
-#grid-container-reverse {
-    grid-template-rows: minmax(100px, max-content) minmax(100px, 1fr);
-}
-#order2 {
-    grid-row: 1;
-    justify-content: center;
-}
-.grid-container-single {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: minmax(100px, 400px);
 }
 .imagebox {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 5px 5px 0 0;
 }
 .contentbox {
     padding: 10px 20px;
     color: white;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    border-radius: 0 0 5px 5px;
 }
-.contentbox i {
+.contentbox ~ p {
+    margin-top: 20px;
+    height: 100px;
+}
+.contentbox label {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+.contentbox label i:hover {
+    cursor: pointer;
+    color: #FF00FC;
+}
+#moreinfo-cosmo:checked ~ .secondparagraf-cosmo, #moreinfo-evo:checked ~ .secondparagraf-evo, #moreinfo-bio:checked ~ .secondparagraf-bio, #moreinfo-eco:checked ~ .secondparagraf-eco,
+#moreinfo-kids:checked ~ .secondparagraf-forkids, #moreinfo-teachers:checked ~ .secondparagraf-forteachers, #moreinfo-researchers:checked ~ .secondparagraf-forresearchers,
+#moreinfo-robo:checked ~ .secondparagraf-robo, #moreinfo-night:checked ~ .secondparagraf-night, #moreinfo-aero:checked ~ .secondparagraf-aero, #moreinfo-energy:checked ~ .secondparagraf-energy,
+#moreinfo-support:checked ~ .secondparagraf-support, #moreinfo-volunteer:checked ~ .secondparagraf-volunteer, #moreinfo-intern:checked ~ .secondparagraf-intern, #moreinfo-admission:checked ~ .secondparagraf-admission {
+    display: block;
+    
+}
+.contentbox .fa-phone, .contentbox .fa-envelope {
     margin-right: 10px;
     margin-bottom: 10px;
 }
@@ -189,15 +220,18 @@ i, a {
     gap: 10px;
     margin: 20px 0;
     max-width: 100%;
+    
 }
 form div {
     display: flex;
     flex-direction: column;
 }
-.contentbox input , textarea {
+.contentbox input , textarea ,#subject {
     border-bottom: 1px solid black;
     outline: none;
     border-radius: 3px;
+    font-family: opensans;
+    font-weight: bold;
 }
 .day {
     text-align: left;
@@ -206,10 +240,10 @@ form div {
 .time {
     text-align: right;
 }
-.contentbox p a, .footer-links, .contentbox h2 {
+.link, .footer-links {
      text-decoration: underline;
 }
-.contentbox p a:hover, .navlinks a:hover, .footer-links a:hover  {
+.link:hover, .navlinks a:hover, .footer-links a:hover  {
     color: #FF00FC;
 }
 .active {
@@ -220,21 +254,22 @@ form div {
     margin: 0;
     text-transform: uppercase;
 }
-.contentbox .contentbox-link, .footer-info-link {
+.contentbox .contentbox-link, .footer-info-link , .p-link{
     display: flex;
     margin: 0 auto;
     max-width: fit-content;
 }
-.contentbox-link, .footer-info-link {
+.contentbox-link, .footer-info-link, .p-link {
     font-weight: bold;
     background-color: #005EDF;
     border: 1px solid transparent;
     padding: 5px 20px;
 }
-.contentbox-link:hover, .contentbox-link:active, .footer-info-link:hover, .footer-info-link:active {
+.contentbox-link:hover, .contentbox-link:active, .footer-info-link:hover, .footer-info-link:active,.p-link:hover, .p-link:active {
     background-color: #00347B;
     border-color: #FF00FC;
     box-shadow: 0 0 15px #FF00FC;
+    
 }
 footer {
     padding: 0 10px;
@@ -291,6 +326,9 @@ footer {
     color: #e5e5e5;
 }
 @media screen and (min-width: 1000px) {
+    h1 {
+        font-size: 52px;
+    }
     nav .burgericon {
         display: none;
     }
@@ -321,60 +359,17 @@ footer {
     q {
         font-size: 24px;
     }
-    .grid-container {
-        grid-template-rows: minmax(300px,500px);
-        grid-template-columns: minmax(100px,600px) minmax(100px, 400px);
-    }
-    .grid-container-single {
-        grid-template-columns: 1000px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    .grid-container-single .contentbox {
-        align-items: center;
-    }
-    .grid-container-single .contentbox p {
-        max-width: 50%;
-    }
-    .contentbox {
-        justify-content: center;
-        gap: 20px;
-    }
-    #grid-container-access{
-        grid-template-rows: minmax(300px,400px);
-        grid-template-columns: minmax(100px,300px) minmax(100px,300px) minmax(100px,400px);
-    }
-    #grid-container-access .imagebox {
-        grid-row: 1;
-    }
-    #grid-container-access .contentbox {
-        grid-column: 3;
-        grid-row: 1;
-    }
-    #grid-container-reverse {
-        grid-template-columns: minmax(100px, 600px) minmax(100px,400px);
-        grid-template-rows: 1fr;
-    }
-    #order1 {
-        grid-column: 1;
-        grid-row: 1;
-    }
     footer {
         display: grid;
         padding: 10px ;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 1fr 1fr;
         background-position-y: bottom ;
-       
     }
     footer .logo {
         grid-row: 1 / 3;
         grid-column: 2;
         height: 150px;
-        
-    }
-    span {
-        font-size: 20px;
     }
     .footer-info {
         grid-column: 1;
@@ -393,28 +388,23 @@ footer {
         display: none;
     }
 }
-@media screen and (min-width:700px) and (max-width:1000px) {
-    .grid {
+@media screen and (min-width:700px)  {
+    .grid{
         flex-direction: row;
         gap: 20px;
         flex-wrap: wrap ;
         align-items: flex-start;
         justify-content: center;
     }
-    .grid-container {
-        grid-template-rows:  300px auto ;
-        grid-template-columns: 400px;
+    .grid-row {
+        flex-direction: row;
+        max-width: 80%;
+        
+    }
+    .grid-container, #grid-container-access {
+    grid-template-rows: minmax(50px, 300px) minmax(260px, auto);
     }
     .contentbox .contentbox-link {
         margin-top: auto;
     }
-    .grid-container-single {
-        grid-template-columns: 400px ;
-        grid-template-rows: 300px;
-    }
-    #grid-container-access {
-        grid-template-columns: 200px 200px;
-        grid-template-rows: 300px auto;
-    }
-    
 }

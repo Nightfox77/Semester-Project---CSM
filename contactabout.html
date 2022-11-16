@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community Science Museum About us Contact">
+    <meta name="keywords" content="science, museum, knowledge, about, contact, message">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5290b1a98f.js" crossorigin="anonymous"></script>
-    <title>Community Science Museum</title>
+    <title>CSM - Community Science Museum About/Contact</title>
 </head>
 <body>
     <header id="header">
@@ -47,11 +49,10 @@
         </nav>
     </header>
     <main>
-        <div class="headline">
-            <h1>About us</h1>
-        </div>
-        <section class="grid">
-            <div class="grid-container">
+       <section class="grid-row" id="contact">
+           <div class="grid-container-column">
+                <div class="headline">
+                    <h1>About us</h1></div>
                 <div class="imagebox" style="background-image: url(Images/CSMabout.JPG)">
                 </div>
                 <div class="contentbox" style="background-color: #002657;">
@@ -61,13 +62,14 @@
                     <p>We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life (apart from the dinosaur exhibits – they only come to life at night when everyone`s gone home).</p>
                 </div>
             </div>
-        </section>
-        <div class="headline">
-            <h1>Contact</h1>
-        </div>
-        <section class="grid" id="contact">
-            <div class="grid-container" id="grid-container-reverse">
-               <div class="contentbox" id="order1" style="background-color: #002657;">  
+            <div class="grid-container-column">
+                <div class="headline">
+                    <h1>Contact</h1></div>
+                    <div class="contentbox" style="background-color: #002657;border-radius: 5px 5px 0 0;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
+                    </div>
+               <div class="contentbox"  style="background-color: #002657;">  
                     <form>
                         <div>
                             <label for="name">Name</label>
@@ -82,19 +84,22 @@
                             <input type="text" id="phone">
                         </div>
                         <div>
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option id="option" value="placeholder">Choose...</option>
+                                <option id="option" value="feedback">I want to give Feedback</option>
+                                <option id="option" value="group">I want to make a groupreservation</option>
+                                <option id="option" value="question">I have a question</option>
+                                <option id="option" value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
                             <label for="message">Message</label>
                             <textarea rows="10" type="text" id="message"></textarea>
                         </div>
                     </form>
                     <a href="#" class="contentbox-link">Submit</a>
-                    </div>
-                    <div class="contentbox" id="order2" style="background-color: #002657;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
-                    </div>
-                    
                 </div>
-               
             </div>
         </section>
     </main>
