@@ -155,7 +155,7 @@ i, a {
     display: grid;
     grid-auto-columns: minmax(250px,500px) ;
     grid-auto-rows: auto minmax(300px, max-content) 1fr;
-    align-content: flex-start;
+    justify-content: center;
 }
 .grid-container-column .contentbox {
     justify-content: center;
