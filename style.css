@@ -270,7 +270,6 @@ form div {
     padding: 5px 20px;
 }
 .contentbox-link:hover, .contentbox-link:active, .footer-info-link:hover, .footer-info-link:active,.p-link:hover, .p-link:active {
-    background-color: #00347B;
     border-color: #FF00FC;
     box-shadow: 0 0 15px #FF00FC;
     
