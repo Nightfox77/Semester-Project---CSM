@@ -161,7 +161,6 @@ i, a {
     justify-content: center;
 }
 .grid-container:hover {
-    cursor: pointer;
     box-shadow: 5px 5px 5px grey;
 }
 #grid-container-access {
@@ -178,7 +177,6 @@ i, a {
     height: 100%;
     border-radius: 5px 5px 0 0;
     object-fit: cover;
-    
 }
 .contentbox {
     padding: 10px 20px;
@@ -194,7 +192,6 @@ i, a {
     height: 100px;
 }
 .contentbox label {
-    
     display: flex;
     margin-top: auto;
     margin-bottom: 10px;
@@ -209,8 +206,6 @@ i, a {
 #moreinfo-robo:checked ~ .secondparagraf-robo, #moreinfo-night:checked ~ .secondparagraf-night, #moreinfo-aero:checked ~ .secondparagraf-aero, #moreinfo-energy:checked ~ .secondparagraf-energy,
 #moreinfo-support:checked ~ .secondparagraf-support, #moreinfo-volunteer:checked ~ .secondparagraf-volunteer, #moreinfo-intern:checked ~ .secondparagraf-intern, #moreinfo-admission:checked ~ .secondparagraf-admission {
     display: block;
-    
-    
 }
 .contentbox .fa-phone, .contentbox .fa-envelope {
     margin-right: 10px;
@@ -227,7 +222,6 @@ i, a {
     gap: 10px;
     margin: 20px 0;
     max-width: 100%;
-    
 }
 form div {
     display: flex;
