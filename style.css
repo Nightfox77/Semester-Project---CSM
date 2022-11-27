@@ -154,7 +154,7 @@ i, a {
 .grid-container-column {
     display: grid;
     grid-auto-columns: minmax(250px,500px) ;
-    grid-auto-rows: auto minmax(300px, max-content) 1fr;
+    grid-auto-rows: auto minmax(200px,300px) 1fr;
     justify-content: center;
 }
 .grid-container-column .contentbox {
@@ -166,16 +166,19 @@ i, a {
 }
 #grid-container-access {
     grid-template-columns: minmax(100px, 150px) minmax(100px, 150px);
-    
 }
 #grid-container-access .contentbox {
     grid-column: 1/3;
 }
 .imagebox {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: grid;
+}
+.imagebox img {
+    max-width: 100%;
+    height: 100%;
     border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    
 }
 .contentbox {
     padding: 10px 20px;
